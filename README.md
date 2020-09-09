@@ -107,3 +107,5 @@ Es un objeto al cual podemos definir variables, de diferente tipo e incluso func
 
 Si se desea modificar el state por medio de un evento click por ejemplo, es importante tener en cuenta que se debe usar el camel case, por ejemplo un evento click se usa onClick con la letra C en mayúscula y así en general para los demás.
 
+# Instalación y configuración de entorno
+
