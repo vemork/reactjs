@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import HolaMundo from './components/HolaMundo';
+// import App from './App';
+// import HolaMundo from './components/HolaMundo';
+// import Buttonless from './components/Buttonless';
+import Buttonful from './components/ButtonFul';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <HolaMundo />
+    {/* <HolaMundo /> */}
+    {/* <Buttonless text="Click" /> */}
+    <Buttonful />
   </React.StrictMode>,
   document.getElementById('root')
 );
