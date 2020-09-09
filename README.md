@@ -160,4 +160,26 @@ Nos ayuda a preparar nuestro proyecto para un ambiente de desarrollo local/produ
  npm install webpack webpack-cli html-webpack-plugin html-loader --save --also=dev
  ```
 
- 
+ hecho esto se crea la carpeta dist con los archivos principales, bundle contine todo el proyecto compilado y optimizado.
+
+Una vez instalado se debe configurar el script que corresponde en package.json, agregamos la linea en scripts
+
+```
+"build": "webpack --mode production"
+```
+
+
+ # Webpack Dev Server : Reporte de errores y cambios en tiempo real
+
+Con esta configuración podemos construir un entorno de desarrollo local que permita ver los cambios en tiempo real
+
+```
+npm install webpack-dev-server --save --also=dev
+```
+
+Una vez instalado se debe configurar el script que corresponde en package.json, agregamos la linea en scripts
+
+```
+"start": "webpack-dev-server --open --mode development"
+```
+
