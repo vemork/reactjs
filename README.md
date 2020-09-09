@@ -183,3 +183,14 @@ Una vez instalado se debe configurar el script que corresponde en package.json, 
 "start": "webpack-dev-server --open --mode development"
 ```
 
+# Estilos con SASS
+
+Para instalar SASS dentro del proyecto vamos a usar los siguientes paquetes:
+
+```
+npm install mini-css-extrat-plugin : permite extraer el css del bundle resultante para crear uno nuevo
+
+css-loader node-sass sass-loader --save --also=dev
+```
+
+
