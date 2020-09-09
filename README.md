@@ -152,3 +152,12 @@ Usage of the `--dev` option is deprecated. Use `--also=dev` instead.
 @babel/preset-react : permite trabajar con react
 ```
 
+# Webpack: Empaquetanto nuestros módulos
+
+Nos ayuda a preparar nuestro proyecto para un ambiente de desarrollo local/producción. Toma todos nuestros recursos y los optimiza para poderlos publicar.
+
+ ```
+ npm install webpack webpack-cli html-webpack-plugin html-loader --save --also=dev
+ ```
+
+ 
