@@ -109,3 +109,46 @@ Si se desea modificar el state por medio de un evento click por ejemplo, es impo
 
 # Instalación y configuración de entorno
 
+```
+git init : para inicializar repositorio
+
+npm init -y : para crear metadatos del proyecto, la y preconfigura el proyecto con un package.json 
+```
+
+El package.json nos permite tener la historia de los elementos instlados, configuraciones y scritps del proyecto.
+
+En src van todos nuestros recursos con los que vamos a trabajar durante todo el proyecto.
+
+En src/components donde van todos nuestros componentes
+
+En public van a ir todos los archivos y elementos que serán enviados a producción.
+
+```
+npm install react react-dom : para instalar la librería 
+```
+
+se debe prestar atención durante la instalación a alertas (warnings) o vulneravilidades que el sistema reporte y evaluar si usar o no esos elementos.
+
+
+```
+package-lock.json : permite manejar el versionado de paquetes del proyecto 
+```
+
+# Agregando compatibilidad con todos los navegadores usando Babel
+
+Babel permite crear js moderno y compatible con todos los navegadores
+
+```
+npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save -dev : para instalar todo lo necesario de babel, --save -dev para indicar que se guarde como una dependencia solo en desarrollo
+```
+
+```
+Usage of the `--dev` option is deprecated. Use `--also=dev` instead.
+```
+.babelrc será el archivo que contendrá las configuraciones necesarias, debe arrancar con . para que el sistema entienda que es un archivo que debería ocultar, de esta forma ocurre en sistemas unix
+
+```
+@babel/present-env  : permite trabajar con ECMA5 y ECMA6
+@babel/preset-react : permite trabajar con react
+```
+
