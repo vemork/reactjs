@@ -254,3 +254,8 @@ npm install file-loader --save -also=dev
 ```
 
 Ahora dentro del weback.config.js se debe añadir una nueva regla, para elementos multimedia.
+
+# Imports, variables y fuentes de Google con Sass
+
+vamos a crear un archivo llamado (vars.scss) que contendra algunos elementos globales para nuestro sitio y que gracias a SCSS podemos usar como variables.
+
