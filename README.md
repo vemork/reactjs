@@ -193,4 +193,29 @@ npm install mini-css-extrat-plugin : permite extraer el css del bundle resultant
 css-loader node-sass sass-loader --save --also=dev
 ```
 
+ahora se debe agregar la configuración necesario dentro del webpack.config.js agregando una nueva regla e importando el MiniCssExtractPlugin
+
+# Configuración final : ESLint y Git ignore
+
+ESLint nos ayuda a prevenir errores, nos ayuda a detectar errores o typos manteniendo un estándart dentro de nuestro código.
+
+```
+npm install eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+```
+
+En caso de presentar problemas al realizar la descarga de paquetes desde npm me pueden usar los siguientes comandos.
+
+```
+# first this
+> npm config rm proxy
+> npm config rm https-proxy
+
+# then this
+> npm config set registry https://registry.npmjs.org/
+```
+
+En la raíz se crea el archivo (.eslintrc) el cual contiene una serie de reglas recomendadas para que, al momento de codificar, las cosas me hagan de la mejor manera. Cada uno de estos elementos tiene más información que puede ser consultada en la web.
+
+adicional se debe crear el archivo (.gitignore) el cual evitara que al momento de ir a producción se carguen archivos que no son adecuados, como por ejemplo el node_modules.
+
 
