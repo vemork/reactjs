@@ -219,3 +219,38 @@ En la raíz se crea el archivo (.eslintrc) el cual contiene una serie de reglas 
 adicional se debe crear el archivo (.gitignore) el cual evitara que al momento de ir a producción se carguen archivos que no son adecuados, como por ejemplo el node_modules.
 
 
+# Arquitectura de componentes
+
+Se puede separar una vez se tenga la parte visual diseñada (incluso en sus primeras etapas) en diferentes componentes y en su interior los elementos que forman parte de ellos.
+
+En ocasiones un componente puede contener en su interior componentes internos y a su vez pueden en algunas ocasiones poder reusarse a lo largo de todo un sitio.
+
+# Estructura del proyecto
+
+Cuando trabajas en React debes recordar que no se puede usar la palabra class (pues se encuentra reservada por la librería) por lo cual se debe usar className, además se debe tener la precaución de colocar la barra inclinada (/) como cierre en cada una de las etiquetas de HTML
+
+Una buena forma de organizar el trabajo es creando un nuevo directorio llamado contenedores dentro de nuestro proyecto, dentro de el un archivo App.jsx que nos ayudará a agregar nuestros otros componentes.
+
+Recuerda colocar los imports dentro de cada componentes para incluir los estilos.
+
+# Estructura y Estilos de Carousel y Carousel Item
+
+Algo importante al construir el componente de categorias es estructurarlo de tal forma que encapsulado en un <Div> yo pueda mandar un hijo y hacer un render de los elementos que serán en este caso los videos.
+
+Usando la instruccion "children" puedo insertar uno o varios componentes, que se pasa por medio de los props. 
+
+Repetimos el mismo análisis al momento de crear el componente Carousel, colocando los items como hijos, pasados como propiedad.
+
+hecho esto se puede complementar los componentes y estilos que hagan falta para cada uno de los componentes hasta llegar al foorter.
+
+# Añadiendo imágenes con Webpack
+
+Con ayuda de webpack podemos importar archivos a nuestro proyecto y separar para cuando se vayan a enviar a proudcción.
+
+vamos a instalar un paquete necesario para webpack 
+
+```
+npm install file-loader --save -also=dev
+```
+
+Ahora dentro del weback.config.js se debe añadir una nueva regla, para elementos multimedia.
