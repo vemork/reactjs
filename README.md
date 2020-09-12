@@ -259,3 +259,56 @@ Ahora dentro del weback.config.js se debe añadir una nueva regla, para elemento
 
 vamos a crear un archivo llamado (vars.scss) que contendra algunos elementos globales para nuestro sitio y que gracias a SCSS podemos usar como variables.
 
+# Creando una Fake API
+
+Vamos ahora a simular una API, vamos a obtener desde un json los item del carousel, por medio de un complemento json-server y así hacer un render de los elementos en el proyecto.
+
+Para este segmento vamos a crear y cargar el archivo InitialState.json con la información necesaria para que nuestra fake API funcione correctamente, luego vamos a instalar el paquete json-server para poder consumirlo de forma correcta.
+
+Es importante tener en cuenta que esta configuración requiere tener permisos para su ejecución, puede que no tenerlos nos genere error. Para que esto no ocurra recuerda usar la palabra SUDO en caso de unix o configurar la terminal como admin en el caso de windows.
+
+Al tener instalado este paquete se debe correr en una pestaña nueva dentro de nuestra terminal. 
+
+```
+npm install json-server -g
+json-server initialState.json : fake API runningjs
+
+```
+
+# React Hooks: useEffect y useState
+
+Fue presentado oct del 2018, esta implemetación le da estado y ciclo de vida a componentes tipo función (Stateless), como no se entendía muy bien los conceptos de clases, sus propiedades y la transmisión de estas entre componentes dio pie y fuerza a esta nueva forma de trabajar.
+
+Usando los hooks, podemos hacer llamados (de estados y ciclo de vida) y paso de propiedades entre ellos sin importar que tan lejanos (o inmersos) se encuentren.
+
+Disponible desde la version 16.8, en caso de tener que migrar un proyecto de una versión anterior es muy importante analizar la compatibilidad de este cambio, si desde el inicio se van a proyectar usar es mejor hacerlo desde el inicio.
+
+useState : manejo el estado
+
+useEffect :  hago las trasmisiones (peticiones a un API, transmitir un evento, o estar escuchando algún cmabio)
+
+Dentro del app.jsx vamos actualizar el componente React, para poder traer dos funciones especiales, useEffect y useState.
+
+```
+import React, {useState, useEffect } from 'react';
+
+```
+
+el componente debe cambiar puesto que si tengo un return implícito (manejado por callback) no me será suficiente, por lo tanto debo tenerlo de forma explicita para poder continuar.
+
+ahora uso las siguientes propiedades videos, setVideos e igualo a useState que puede recibir como parámetros (arreglos, objetos, numeros, booleanos) de inicialización.
+
+
+```
+const [ videos : para manejar el estado,
+        setVideos : para actualizar el estado
+      ] = useState ([])
+```
+
+luego usamos useEffect para hacer el llamado al fake API y obtener nuestra data, para así actualizar nuestro estado por medio de setVideos. Adicional useEffect espera "escuchando" cualquier cambio en cualquier propiedad para poder gestionarlo.
+si no se pasa esta propiedad se crea un loop infinito.
+
+
+
+
+
