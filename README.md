@@ -332,4 +332,30 @@ una vez hecho esto se podrán crear las validaciones, con esto podemos identific
 React Devtools, es una herramienta que nos permite analizar y revisar como están construirdos los diferentes componentes de nuestros proyectos. Una herramienta usada por los desarrolladores es la consola del navegador donde se pueden ver las diferetes alertas y errores.
 
 
+# Instalando React Router
+
+```
+npm install react-router-dom --save
+```
+
+# Creando el archivo de rutas
+
+Dentro de la carpeta src, vamos a crear la carpeta routes desde la cual vamos a manejar las rutas  dentro un archivo App.js.
+
+Dentro de este archivo importamos 
+
+```
+import { BrowserRouter, Route } from 'react-router-dom';
+```
+
+luego creamos nuestra primer ruta asociando un path y un componente, como se va a reusar el componente (conteiner app) reemplazamos App por Home teniendo en cuenta hacer el cambio de referencias al interior del código para evitar que se siga llamando al componente App.
+
+```
+    <BrowserRouter>
+        <Route exact path="/" component= {Home} />
+        <Route exact path="/login" component= {Login} />
+    </BrowserRouter>
+```
+
+de esta forma cada que se tenga una coincidencia exacta con la ruta nos cargará el(los) componentes deseados. En caso de obtener el error Cannot GET /login, significa que debemos adicionar una regla para que nuestro entorno de desarrollo logre comunicar correctamente el manejo de las rutas, por lo tanto se deben agregar al webpack las siguientes instrucciones.
 
