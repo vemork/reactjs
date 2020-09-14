@@ -309,6 +309,27 @@ luego usamos useEffect para hacer el llamado al fake API y obtener nuestra data,
 si no se pasa esta propiedad se crea un loop infinito.
 
 
+# Custom Hooks
+
+Es la posibilidad de separar la lógica de los componentes para poderlos reutilizar cuando sea necesario.
+
+Por convención se debe usar la palabra inicial use, para poderlo identificar como un hook y su extension es js pues no vamos a mezclar ( HTML + JS ) es decir a usar nada de JSX.
+
+# PropTypes
+
+ Estos nos ofrecen una manera dinámica de verificar las propiedades que le pasamos a nuestros componentes, tipo de dato y así poder saber si es string, arreglo o función. también nos permite indicar si son requeridos y pasar algunos datos como referencia.
+
+ vamos a instalar un paquete para poder manejar los protypes,
+
+ ```
+ npm install prop-types
+ ```
+
+una vez hecho esto se podrán crear las validaciones, con esto podemos identificar las propiedades  y los tipos de datos esperados.
+
+# Debuggeando React con React devtools
+
+React Devtools, es una herramienta que nos permite analizar y revisar como están construirdos los diferentes componentes de nuestros proyectos. Una herramienta usada por los desarrolladores es la consola del navegador donde se pueden ver las diferetes alertas y errores.
 
 
 
