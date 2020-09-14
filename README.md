@@ -338,7 +338,7 @@ React Devtools, es una herramienta que nos permite analizar y revisar como está
 npm install react-router-dom --save
 ```
 
-# Creando el archivo de rutas
+# Creando el archivo de rutas y los componentes login y register
 
 Dentro de la carpeta src, vamos a crear la carpeta routes desde la cual vamos a manejar las rutas  dentro un archivo App.js.
 
@@ -359,3 +359,29 @@ luego creamos nuestra primer ruta asociando un path y un componente, como se va 
 
 de esta forma cada que se tenga una coincidencia exacta con la ruta nos cargará el(los) componentes deseados. En caso de obtener el error Cannot GET /login, significa que debemos adicionar una regla para que nuestro entorno de desarrollo logre comunicar correctamente el manejo de las rutas, por lo tanto se deben agregar al webpack las siguientes instrucciones.
 
+En caso tal que tengamos una variedad de rutas, podemos importar un componente tipo Switch para encapsular y organizar de una mejor forma las rutas garantizando que solamente sean renderizadas las vistas adecuadas.
+
+```
+        <Switch>
+            <Route exact path="/" component= {Home} />
+            <Route exact path="/login" component= {Login} />
+            <Route exact path="/Register" component= {Register} />
+        </Switch>
+```
+
+# Manejando el error 404 Nor Found
+
+En ocasiones se puede presentar el error de digitar una dirección que no existe para el sistema debemos alertar al usuario de esto.
+
+Luego de construir el componente NotFound.jsx debo agregarlo al routing, teniendo en cuenta que no debo colocar ningún path, por lo cual el sistema interpreta que, cualquier ruta que no coincida con los path explicitos debe redirigirlos al Notfound.
+
+Adicional vamos agragar un fragment, lo que nos permite no añadir más elementos al DOM, es decir, un <div> extra que realmente no es necesario.
+
+Para eso puedo usar la sintaxis <React.Fragment /> o los simblos </> que son equivalentes, recordando que siempre se debe respetar el inicio y fin del bloque.
+
+
+# Componente Layout
+
+Para manejar el header y footer en todas las vistas, debemos crear un layout y presistir estos dos componentes en todas nuestras vistas.
+
+Una vez creado el layout se crea la sección correspondiente y adicional como va a estar esperando un componente del router debemos indicarle por medio de un children que componente se debe renderizar.
