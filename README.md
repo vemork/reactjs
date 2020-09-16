@@ -385,3 +385,19 @@ Para eso puedo usar la sintaxis <React.Fragment /> o los simblos </> que son equ
 Para manejar el header y footer en todas las vistas, debemos crear un layout y presistir estos dos componentes en todas nuestras vistas.
 
 Una vez creado el layout se crea la sección correspondiente y adicional como va a estar esperando un componente del router debemos indicarle por medio de un children que componente se debe renderizar.
+
+# Manejando enlaces y configuraciones
+
+Para manejar los enlaces dentro de nuestro sitio se debe importar el componente link dentro del arichivo al cual vamos agregar el enlace.
+
+```
+import { Link } from 'react-router-dom';
+```
+luego de esto, identifico la sección que contrendrá el enlace usamos en componente Link para agregar la dirección a la cual queremos viajar al momento de dar clic
+
+```
+    <Link to="/">
+        <img className="header__img" src={ logo } alt="Platzi Video" />
+    </Link >
+```
+

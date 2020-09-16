@@ -1,6 +1,7 @@
 import React from 'react';
 import googleIcon from '../assets/static/google-icon.png'
 import twitterIcon from '../assets/static/twitter-icon.png'
+import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/Login.scss';
 
@@ -23,7 +24,11 @@ const Login = () => (
                 <div><img src={ googleIcon } /> Inicia sesión con Google</div>
                 <div><img src={ twitterIcon } /> Inicia sesión con Twitter</div>
             </section>
-            <p class="login__container--register">No tienes ninguna cuenta <a href="">Regístrate</a></p>
+            <p class="login__container--register">No tienes ninguna cuenta
+                <Link to="/Register">
+                    Regístrate
+                </Link>
+            </p>
         </section>
     </section>
 );
